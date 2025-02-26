@@ -92,7 +92,7 @@ pub struct SecretMint<'info> {
     pub mint: Account<'info, Mint>,
     #[account(mut)]
     pub destination: Account<'info, TokenAccount>,
-    #[account(mut)]  // Добавлено mut для mint_authority
+    #[account(mut)]
     pub mint_authority: Signer<'info>,
     pub token_program: Program<'info, Token>,
     #[account(init, payer = mint_authority, space = 8 + 8 + 8)]  
